@@ -1,0 +1,17 @@
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Persistence.deps.json
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Persistence.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Persistence.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Application.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Domain.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Domain.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\bin\Debug\net8.0\AuthServiceIN6BV.Application.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.csproj.AssemblyReference.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.AssemblyInfoInputs.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.AssemblyInfo.cs
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.csproj.CoreCompileInputs.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServ.9FF9A057.Up2Date
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\refint\AuthServiceIN6BV.Persistence.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\AuthServiceIN6BV.Persistence.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Persistence\obj\Debug\net8.0\ref\AuthServiceIN6BV.Persistence.dll

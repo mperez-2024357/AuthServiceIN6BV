@@ -1,0 +1,15 @@
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\bin\Debug\net8.0\AuthServiceIN6BV.Application.deps.json
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\bin\Debug\net8.0\AuthServiceIN6BV.Application.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\bin\Debug\net8.0\AuthServiceIN6BV.Application.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\bin\Debug\net8.0\AuthServiceIN6BV.Domain.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\bin\Debug\net8.0\AuthServiceIN6BV.Domain.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.csproj.AssemblyReference.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.AssemblyInfoInputs.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.AssemblyInfo.cs
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.csproj.CoreCompileInputs.cache
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServ.668B8829.Up2Date
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\refint\AuthServiceIN6BV.Application.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.pdb
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\ref\AuthServiceIN6BV.Application.dll
