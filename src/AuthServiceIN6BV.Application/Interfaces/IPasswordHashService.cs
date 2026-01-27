@@ -1,7 +1,7 @@
 namespace AuthServiceIN6BV.Application.Interface;
-public interface IpasswordHashService
+public interface IPasswordHashService
 {
-    string hashPassword(string password);
-    bool verifyPassword (string password, string hashedPassword
+    string HashPassword(string password);
+    bool VerifyPassword (string password, string hashedPassword
     );
 }
