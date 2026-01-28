@@ -7,7 +7,7 @@ public class userProfile
 {
     [Key]
     [MaxLength(16)]
-    public string id {get ; set;} = string.Empty;
+    public string Id {get ; set;} = string.Empty;
     [Required]
     [MaxLength(16)]
     public string UserId {get; set;} = string.Empty;

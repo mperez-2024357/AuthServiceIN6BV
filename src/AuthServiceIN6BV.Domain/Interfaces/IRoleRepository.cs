@@ -1,6 +1,6 @@
 using AuthServiceIN6BV.Domain.Entities;
 
-namespace AuthServiceIN6BV.Domain.interfaces;
+namespace AuthServiceIN6BV.Domain.Interfaces;
 
 
 public interface IRoleRepository

@@ -10,12 +10,12 @@ public class UserEmail
 
     [Required]
     [MaxLength(16)]
-    public string UsetId {get; set;} = string.Empty;
+    public string UserId {get; set;} = string.Empty;
 
     [Required]
-    public bool EmailVarified {get; set;} = false;
+    public bool EmailVerified {get; set;} = false;
 
-    public string? EmailVerificationToke {get;set;}
+    public string? EmailVerificationToken {get;set;}
 
     public DateTime? EmailVerificationTokeExpiry {get; set;}
 
