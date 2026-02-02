@@ -9,3 +9,4 @@ C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Domain\obj\Debug\net8.0\Au
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Domain\obj\Debug\net8.0\refint\AuthServiceIN6BV.Domain.dll
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Domain\obj\Debug\net8.0\AuthServiceIN6BV.Domain.pdb
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Domain\obj\Debug\net8.0\ref\AuthServiceIN6BV.Domain.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Domain\obj\Debug\net8.0\AuthServiceIN6BV.Domain.sourcelink.json

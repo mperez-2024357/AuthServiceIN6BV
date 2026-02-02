@@ -309,7 +309,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Informatica\\.nuget\\packages\\": {}
+    "C:\\Users\\informatica\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -317,11 +317,11 @@
       "projectUniqueName": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\AuthServiceIN6BV.Application.csproj",
       "projectName": "AuthServiceIN6BV.Application",
       "projectPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\AuthServiceIN6BV.Application.csproj",
-      "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\informatica\\.nuget\\packages\\",
       "outputPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -379,7 +379,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -13,3 +13,4 @@ C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\refint\AuthServiceIN6BV.Application.dll
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.pdb
 C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\ref\AuthServiceIN6BV.Application.dll
+C:\gitIN6BV2026\AuthServiceIN6BV\src\AuthServiceIN6BV.Application\obj\Debug\net8.0\AuthServiceIN6BV.Application.sourcelink.json
