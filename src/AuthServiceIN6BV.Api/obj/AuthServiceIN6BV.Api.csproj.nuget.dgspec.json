@@ -10,11 +10,11 @@
         "projectUniqueName": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Api\\AuthServiceIN6BV.Api.csproj",
         "projectName": "AuthServiceIN6BV.Api",
         "projectPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Api\\AuthServiceIN6BV.Api.csproj",
-        "packagesPath": "C:\\Users\\informatica\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
         "outputPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -106,11 +106,11 @@
         "projectUniqueName": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\AuthServiceIN6BV.Application.csproj",
         "projectName": "AuthServiceIN6BV.Application",
         "projectPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\AuthServiceIN6BV.Application.csproj",
-        "packagesPath": "C:\\Users\\informatica\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
         "outputPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -168,7 +168,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -178,11 +178,11 @@
         "projectUniqueName": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Domain\\AuthServiceIN6BV.Domain.csproj",
         "projectName": "AuthServiceIN6BV.Domain",
         "projectPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Domain\\AuthServiceIN6BV.Domain.csproj",
-        "packagesPath": "C:\\Users\\informatica\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
         "outputPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -226,7 +226,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -236,11 +236,11 @@
         "projectUniqueName": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Persistence\\AuthServiceIN6BV.Persistence.csproj",
         "projectName": "AuthServiceIN6BV.Persistence",
         "projectPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Persistence\\AuthServiceIN6BV.Persistence.csproj",
-        "packagesPath": "C:\\Users\\informatica\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Informatica\\.nuget\\packages\\",
         "outputPath": "C:\\gitIN6BV2026\\AuthServiceIN6BV\\src\\AuthServiceIN6BV.Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Informatica\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -276,21 +276,25 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.9, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.4, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -309,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.417/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
