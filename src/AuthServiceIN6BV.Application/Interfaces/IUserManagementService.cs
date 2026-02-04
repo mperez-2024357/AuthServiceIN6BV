@@ -4,6 +4,6 @@ public interface IUserManagementService
 {
     Task<UserResponseDto> UpdateUserRolAsync(string userId,string roleName);
     Task<IReadOnlyList<string>> GerUserRolesAsync (string userId);
-    Task<IReadOnlyList<UserResponseDto>> GetUserByRolesAsync (string roleName);
+    Task<IReadOnlyList<UserResponseDto>> GetUsersByRolesAsync (string roleName);
     
 }
