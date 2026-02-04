@@ -5,7 +5,7 @@ namespace AuthServiceIN6BV.Domain.Entities;
 public class User
 {
     [Key]
-    [MaxLength(16)]
+    [MaxLength(36)]
     public string Id {get; set;} = string.Empty;
     [Required(ErrorMessage = "El nombre es obligatorio")]
     [MaxLength(25, ErrorMessage = "El nombre no puede tener mas de 25 caracteres")]
@@ -36,7 +36,7 @@ public class User
     [Required]
     public DateTime UpdatedAt {get; set;}
 
-    public userProfile UserProfile {get; set;}= null!;
+    public UserProfile UserProfile {get; set;}= null!;
 
     public ICollection<UserRole> UserRoles {get;set;} = [];
 

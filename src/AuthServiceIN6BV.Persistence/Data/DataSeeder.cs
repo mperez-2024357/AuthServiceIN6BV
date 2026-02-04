@@ -44,7 +44,7 @@ namespace AuthServiceIN6BV.Persistence.Data;
                     Email = "admin@ksports.local",
                     Password = password.HashPassword("Admin1234!"),
                     Status = true,
-                    UserProfile = new userProfile
+                    UserProfile = new UserProfile
                     {
                         Id = profileId,
                         UserId = userId,
@@ -57,7 +57,7 @@ namespace AuthServiceIN6BV.Persistence.Data;
                         UserId = userId,
                         EmailVerified = true,
                         EmailVerificationToken = null,
-                        EmailVerificationTokeExpiry = null
+                        EmailVerificationTokenExpiry = null
                     },
                     UserRoles = [
                         new UserRole{

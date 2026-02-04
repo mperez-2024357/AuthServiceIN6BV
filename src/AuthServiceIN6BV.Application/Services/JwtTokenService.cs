@@ -1,4 +1,4 @@
-using AuthServiceIN6BV.Application.Interfaces;
+using AuthServiceIN6BV.Application.Interface;
 using AuthServiceIN6BV.Domain.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;

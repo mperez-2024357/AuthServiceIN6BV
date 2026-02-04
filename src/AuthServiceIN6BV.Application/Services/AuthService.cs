@@ -1,12 +1,12 @@
 using AuthServiceIN6BV.Application.DTOs;
-using AuthServiceIN6BV.Application.Interfaces;
+using AuthServiceIN6BV.Application.Interface;
 using AuthServiceIN6BV.Application.Exceptions;
 using AuthServiceIN6BV.Application.Extensions;
 using AuthServiceIN6BV.Application.Validators;
 using AuthServiceIN6BV.Domain.Constants;
 using AuthServiceIN6BV.Domain.Entities;
 using AuthServiceIN6BV.Domain.Interfaces;
-using AuthServiceIN6BV.Domain.Enums;
+using AuthServiceIN6BV.Domain.Emuns;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using AuthServiceIN6BV.Application.DTOs.Email;
@@ -69,7 +69,7 @@ public class AuthService(
         }
 
         // Crear nuevo usuario y entidades relacionadas
-        var emailVerificationToken = TokenGenerator.GenerateEmailVerificationToken();
+        var emailVerificationToken = TokenGeneratorService.GenerateEmailVerificationToken();
 
         var userId = UuidGenerator.GenerateUserId();
         var userProfileId = UuidGenerator.GenerateUserId();
@@ -299,7 +299,7 @@ public class AuthService(
         }
 
         // Generar nuevo token
-        var newToken = TokenGenerator.GenerateEmailVerificationToken();
+        var newToken = TokenGeneratorService.GenerateEmailVerificationToken();
         user.UserEmail.EmailVerificationToken = newToken;
         user.UserEmail.EmailVerificationTokenExpiry = DateTime.UtcNow.AddHours(24);
 
@@ -343,7 +343,7 @@ public class AuthService(
         }
 
         // Generar token de reset
-        var resetToken = TokenGenerator.GeneratePasswordResetToken();
+        var resetToken = TokenGeneratorService.GeneratePasswordResetToken();
 
         if (user.UserPasswordReset == null)
         {

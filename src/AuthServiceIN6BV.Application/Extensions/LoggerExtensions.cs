@@ -23,7 +23,7 @@ public static partial class LoggerExtensions
         Level = LogLevel.Warning,
         Message = "Failed login attempt."
     )]
-    public static partial void LogFaildeLoginAttempt(this ILogger logger );
+    public static partial void LogFailedLoginAttempt(this ILogger logger );
     
     [LoggerMessage(
         EventId = 1004,
@@ -37,7 +37,7 @@ public static partial class LoggerExtensions
         Level = LogLevel.Warning,
         Message = "Registration rejected: Username already exists."
     )]
-    public static partial void LogRegistrationWithExistinUsername(this ILogger logger );
+    public static partial void LogRegistrationWithExistingUsername(this ILogger logger );
     
     [LoggerMessage(
         EventId = 1006,

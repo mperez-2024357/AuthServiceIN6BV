@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using AuthServiceIN6BV.Application.Interface;
 namespace AuthServiceIN6BV.Application.DTOs;
-public class Register
+public class RegisterDto
 {
     [Required]
     [MaxLength(25)]
@@ -24,7 +24,7 @@ public class Register
 
     [Required]
     [StringLength(8, MinimumLength = 8)]
-    public string phone {get; set;} = string.Empty;
+    public string Phone {get; set;} = string.Empty;
 
     public IFileData? ProfilePicture {get; set;}
 }

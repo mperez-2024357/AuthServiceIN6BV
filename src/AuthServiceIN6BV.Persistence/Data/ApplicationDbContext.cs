@@ -5,7 +5,7 @@ namespace AuthServiceIN6BV.Persistence.Data;
 public class ApplicationDbContext (DbContextOptions<ApplicationDbContext> options) : DbContext(options)
 {
    public DbSet<User> Users {get; set;}
-    public DbSet<userProfile> UserProfiles {get; set;}
+    public DbSet<UserProfile> UserProfiles {get; set;}
     public DbSet<Role> Roles {get; set;}
     public DbSet<UserRole> UserRoles {get; set;}
     public DbSet<UserEmail> UserEmails {get; set;}
@@ -59,9 +59,11 @@ public class ApplicationDbContext (DbContextOptions<ApplicationDbContext> option
                     .IsRequired()
                     .HasMaxLength(25);
                 entity.Property(e => e.Surname)
-                    .IsRequired();
+                    .IsRequired()
+                    .HasMaxLength(25);
                 entity.Property(e => e.Username)
-                    .IsRequired();
+                    .IsRequired()
+                    .HasMaxLength(25);
                 entity.Property(e => e.Email)
                     .IsRequired();
                 entity.Property(e => e.Password)
@@ -78,7 +80,7 @@ public class ApplicationDbContext (DbContextOptions<ApplicationDbContext> option
 
                 entity.HasOne(e => e.UserProfile)
                     .WithOne(p => p.User)
-                    .HasForeignKey<userProfile>(up => up.UserId);
+                    .HasForeignKey<UserProfile>(up => up.UserId);
                 entity.HasMany(e => e.UserRoles)
                     .WithOne(ur => ur.User)
                     .HasForeignKey(ur => ur.UserId);
@@ -91,7 +93,7 @@ public class ApplicationDbContext (DbContextOptions<ApplicationDbContext> option
                
                 
             });
-            modelBuilder.Entity<userProfile>(entity =>
+            modelBuilder.Entity<UserProfile>(entity =>
                 {
                     entity.HasKey(e => e.Id);
                     entity.Property(e => e.Id)
@@ -101,7 +103,8 @@ public class ApplicationDbContext (DbContextOptions<ApplicationDbContext> option
                         .IsRequired()
                         .HasMaxLength(16);
                     entity.Property(e => e.ProfilePicture).HasDefaultValue("");
-                    entity.Property(e => e.Phone).HasMaxLength(8);
+                    entity.Property(e => e.Phone)
+                    .HasMaxLength(8);
 
                 });
             modelBuilder.Entity<Role>(entity =>

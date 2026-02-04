@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using System.Reflection.Metadata;
+using System.Timers;
 
 namespace AuthServiceIN6BV.Domain.Entities;
 
-public class userProfile
+public class UserProfile
 {
     [Key]
     [MaxLength(16)]
@@ -15,9 +15,9 @@ public class userProfile
     public string ProfilePicture {get; set;}=string.Empty;
 
     [Required]
-    [StringLength(8, MinimumLength = 8 , ErrorMessage = "El numero de telefono debe tener ex")]
-    [RegularExpression(@"^\d{8}$" , ErrorMessage = "El telefono solo debe contener numeros")]
-    public string Phone {get; set;}= string.Empty;
+    [StringLength(8, MinimumLength = 8, ErrorMessage = "El numero de telefono debe tener entre 8 y 16 caracteres")]
+    [RegularExpression(@"^\d+$", ErrorMessage = "El telefono solo debe contener numeros")]
+    public string Phone { get; set; } = string.Empty;
 
     [Required]
     public User User {get; set;} = null!;

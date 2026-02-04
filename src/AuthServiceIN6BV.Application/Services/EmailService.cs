@@ -3,7 +3,7 @@ using Microsoft.Extensions.Logging;
 using MailKit.Net.Smtp;
 using MailKit.Security;
 using MimeKit;
-using AuthServiceIN6BV.Application.Interfaces;
+using AuthServiceIN6BV.Application.Interface;
 
 namespace AuthServiceIN6BV.Application.Services;
 
@@ -144,14 +144,14 @@ public class EmailService(IConfiguration configuration, ILogger<EmailService> lo
                 logger.LogError(authEx, "Gmail authentication failed. Check app password.");
                 throw new InvalidOperationException($"Gmail authentication failed: {authEx.Message}. Please check your app password.", authEx);
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 logger.LogError(ex, "Failed to send email");
                 throw;
             }
             logger.LogInformation("Email processed");
         }
-        catch (Exception ex)
+        catch (System.Exception ex)
         {
             logger.LogError(ex, "Failed to send email");
 

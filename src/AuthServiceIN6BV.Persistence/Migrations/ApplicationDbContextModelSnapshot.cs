@@ -124,14 +124,14 @@ namespace AuthServiceIN6BV.Persistence.Migrations
                         .HasColumnType("character varying(16)")
                         .HasColumnName("id");
 
-                    b.Property<DateTime?>("EmailVerificationTokeExpiry")
-                        .HasColumnType("timestamp with time zone")
-                        .HasColumnName("email_verification_toke_expiry");
-
                     b.Property<string>("EmailVerificationToken")
                         .HasMaxLength(256)
                         .HasColumnType("character varying(256)")
                         .HasColumnName("email_verification_token");
+
+                    b.Property<DateTime?>("EmailVerificationTokenExpiry")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("email_verification_token_expiry");
 
                     b.Property<bool>("EmailVerified")
                         .ValueGeneratedOnAdd()
@@ -188,6 +188,44 @@ namespace AuthServiceIN6BV.Persistence.Migrations
                     b.ToTable("user_password_resets", (string)null);
                 });
 
+            modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.UserProfile", b =>
+                {
+                    b.Property<string>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasMaxLength(8)
+                        .HasColumnType("character varying(8)")
+                        .HasColumnName("phone");
+
+                    b.Property<string>("ProfilePicture")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(512)
+                        .HasColumnType("character varying(512)")
+                        .HasDefaultValue("")
+                        .HasColumnName("profile_picture");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasMaxLength(16)
+                        .HasColumnType("character varying(16)")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_user_profiles");
+
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_user_profiles_user_id");
+
+                    b.ToTable("user_profiles", (string)null);
+                });
+
             modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.UserRole", b =>
                 {
                     b.Property<string>("Id")
@@ -228,44 +266,6 @@ namespace AuthServiceIN6BV.Persistence.Migrations
                     b.ToTable("user_roles", (string)null);
                 });
 
-            modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.userProfile", b =>
-                {
-                    b.Property<string>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(16)
-                        .HasColumnType("character varying(16)")
-                        .HasColumnName("id");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasMaxLength(8)
-                        .HasColumnType("character varying(8)")
-                        .HasColumnName("phone");
-
-                    b.Property<string>("ProfilePicture")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(512)
-                        .HasColumnType("character varying(512)")
-                        .HasDefaultValue("")
-                        .HasColumnName("profile_picture");
-
-                    b.Property<string>("UserId")
-                        .IsRequired()
-                        .HasMaxLength(16)
-                        .HasColumnType("character varying(16)")
-                        .HasColumnName("user_id");
-
-                    b.HasKey("Id")
-                        .HasName("pk_user_profiles");
-
-                    b.HasIndex("UserId")
-                        .IsUnique()
-                        .HasDatabaseName("ix_user_profiles_user_id");
-
-                    b.ToTable("user_profiles", (string)null);
-                });
-
             modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.UserEmail", b =>
                 {
                     b.HasOne("AuthServiceIN6BV.Domain.Entities.User", "User")
@@ -290,6 +290,18 @@ namespace AuthServiceIN6BV.Persistence.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.UserProfile", b =>
+                {
+                    b.HasOne("AuthServiceIN6BV.Domain.Entities.User", "User")
+                        .WithOne("UserProfile")
+                        .HasForeignKey("AuthServiceIN6BV.Domain.Entities.UserProfile", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_profiles_users_user_id");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.UserRole", b =>
                 {
                     b.HasOne("AuthServiceIN6BV.Domain.Entities.Role", "Role")
@@ -307,18 +319,6 @@ namespace AuthServiceIN6BV.Persistence.Migrations
                         .HasConstraintName("fk_user_roles_users_user_id");
 
                     b.Navigation("Role");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("AuthServiceIN6BV.Domain.Entities.userProfile", b =>
-                {
-                    b.HasOne("AuthServiceIN6BV.Domain.Entities.User", "User")
-                        .WithOne("UserProfile")
-                        .HasForeignKey("AuthServiceIN6BV.Domain.Entities.userProfile", "UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("fk_user_profiles_users_user_id");
 
                     b.Navigation("User");
                 });

@@ -13,7 +13,7 @@ public interface IUserRepository
 
     Task<User?> GetByEmailVerificationTokenAsync (string token);
 
-    Task<User?> GetByPasswordRestTokenAsync(string token);
+    Task<User?> GetByPasswordResetTokenAsync(string token);
 
     Task<bool> ExistsByEmailAsync (string email);
 

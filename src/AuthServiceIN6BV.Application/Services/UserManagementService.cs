@@ -1,5 +1,5 @@
 using AuthServiceIN6BV.Application.DTOs;
-using AuthServiceIN6BV.Application.Interfaces;
+using AuthServiceIN6BV.Application.Interface;
 using AuthServiceIN6BV.Domain.Constants;
 using AuthServiceIN6BV.Domain.Entities;
 using AuthServiceIN6BV.Domain.Interfaces;
@@ -63,14 +63,14 @@ public class UserManagementService(IUserRepository users, IRoleRepository roles,
 
     public async Task<IReadOnlyList<string>> GetUserRolesAsync(string userId)
     {
-        var roleNames = await roles.GetUserRoleNamesAsync(userId);
+        var roleNames = await roles.GetUserRoleNameAsync(userId);
         return roleNames;
     }
 
     public async Task<IReadOnlyList<UserResponseDto>> GetUsersByRoleAsync(string roleName)
     {
         roleName = roleName?.Trim().ToUpperInvariant() ?? string.Empty;
-        var usersInRole = await roles.GetUsersByRoleAsync(roleName);
+        var usersInRole = await roles.GetUserByRoleAsync(roleName);
         return usersInRole.Select(u => new UserResponseDto
         {
             Id = u.Id,

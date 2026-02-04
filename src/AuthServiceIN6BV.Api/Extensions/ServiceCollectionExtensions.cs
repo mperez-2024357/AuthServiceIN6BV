@@ -17,12 +17,18 @@ public static class ServiceCollectionExtensions
 
         services.AddScoped<IUserRepository,UserRepository>();
         services.AddScoped<IRoleRepository,RoleRepository>();
-
+        services.AddScoped<IAuthService,AuthService>();
+        services.AddScoped<IUserManagementService,UserManagementService>();
+        services.AddScoped<IPasswordHashService,PasswordHashService>();
+        services.AddScoped<IJwtTokenService,JwtTokenService>();
+        services.AddScoped<ICloudinaryService,CloudinaryService>();
+        services.AddScoped<IEmailService,EmailService>();
+        
         services.AddHealthChecks();
 
         return services;
     }
-    public static IServiceCollection addApiDomentation(this IServiceCollection services)
+    public static IServiceCollection AddApiDocumentation(this IServiceCollection services)
     {
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();

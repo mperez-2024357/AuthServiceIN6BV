@@ -1,10 +1,10 @@
-using AuthServiceIN6BV.Application.Interfaces;
+using AuthServiceIN6BV.Application.Interface;
 namespace AuthServiceIN6BV.Application.Validators;
 public static class FileValidator
 {
-    private static readonly string[] permittedExtensions = { ".jpg", ".jpeg", ".png", ".gif" };
+    private static readonly string[] AllowedImageExtension = { ".jpg", ".jpeg", ".png", ".gif" };
     private const int MaxFileSizeInBytes = 5 * 1024 * 1024; // 5 MB
-    public static(bool IsValid, string? ErrorMessage) ValidateFile(IFileData file)
+    public static(bool IsValid, string? ErrorMessage) ValidateImage(IFileData file)
     {
        if (file == null|| file.Size == 0)
        {

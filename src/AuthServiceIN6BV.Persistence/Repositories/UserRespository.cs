@@ -3,10 +3,12 @@ using AuthServiceIN6BV.Domain.Entities;
 using AuthServiceIN6BV.Domain.Interfaces;
 using AuthServiceIN6BV.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
+ 
 namespace AuthServiceIN6BV.Persistence.Repositories;
-public class UserRepository (ApplicationDbContext context): IUserRepository
+ 
+public class UserRepository(ApplicationDbContext context) : IUserRepository
 {
-    public async Task<User?> GetByIdAsync(string id)
+    public async Task<User> GetByIdAsync(string id)
     {
         var user = await context.Users
             .Include(u => u.UserProfile)
@@ -14,20 +16,21 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => u.Id == id);
-            return user ?? throw new InvalidOperationException($"User with id {id} not found.");
+            .FirstOrDefaultAsync(u =>u.Id == id);
+            return user ?? throw new InvalidOperationException($"User withd id {id} not found");
     }
+ 
     public async Task<User?> GetByEmailAsync(string email)
     {
-        var user = await context.Users
+        return await context.Users
             .Include(u => u.UserProfile)
             .Include(u => u.UserEmail)
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => EF.Functions.Like(u.Email, email));
-            return user ?? throw new InvalidOperationException($"User with email {email} not found.");
+            .FirstOrDefaultAsync(u => EF.Functions.ILike(u.Email, email));
     }
+ 
     public async Task<User?> GetByUsernameAsync(string username)
     {
         return await context.Users
@@ -36,7 +39,7 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => EF.Functions.Like(u.Username, username));
+            .FirstOrDefaultAsync(u => EF.Functions.ILike(u.Username, username));
     }
     public async Task<User?> GetByEmailVerificationTokenAsync(string token)
     {
@@ -46,12 +49,11 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => u.UserEmail != null && 
-                u.UserEmail.EmailVerificationToken == token &&
-                u.UserEmail.EmailVerificationTokeExpiry > DateTime.UtcNow);
-                
+            .FirstOrDefaultAsync(u => u.UserEmail != null &&
+                                    u.UserEmail.EmailVerificationToken == token &&
+                                    u.UserEmail.EmailVerificationTokenExpiry > DateTime.UtcNow);
     }
-    public async Task<User?> GetByPasswordRestTokenAsync(string token)
+    public async Task<User?> GetByPasswordResetTokenAsync(string token)
     {
         return await context.Users
             .Include(u => u.UserProfile)
@@ -59,9 +61,9 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
             .Include(u => u.UserPasswordReset)
             .Include(u => u.UserRoles)
                 .ThenInclude(ur => ur.Role)
-            .FirstOrDefaultAsync(u => u.UserPasswordReset != null && 
-                u.UserPasswordReset.PasswordResetToken == token &&
-                u.UserPasswordReset.PasswordResetTokenExpiry > DateTime.UtcNow);
+            .FirstOrDefaultAsync(u => u.UserPasswordReset != null &&
+                                    u.UserPasswordReset.PasswordResetToken == token &&
+                                    u.UserPasswordReset.PasswordResetTokenExpiry > DateTime.UtcNow);
     }
     public async Task<User> CreateAsync(User user)
     {
@@ -74,6 +76,7 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
         await context.SaveChangesAsync();
         return await GetByIdAsync(user.Id);
     }
+ 
     public async Task<bool> DeleteAsync(string id)
     {
         var user = await GetByIdAsync(id);
@@ -81,22 +84,27 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
         await context.SaveChangesAsync();
         return true;
     }
+ 
     public async Task<bool> ExistsByEmailAsync(string email)
     {
-        return await context.Users.
-            AnyAsync(u => EF.Functions.ILike(u.Email, email));
+        return await context.Users
+            .AnyAsync(u => EF.Functions.ILike(u.Email, email));
     }
+ 
     public async Task<bool> ExistsByUsernameAsync(string username)
     {
-        return await context.Users.
-            AnyAsync(u => EF.Functions.ILike(u.Username, username));
+        return await context.Users
+            .AnyAsync(u => EF.Functions.ILike(u.Username, username));
     }
-    public async Task UpdateUserRoleAsync(string userId , string roleId)
+ 
+    public async Task UpdateUserRoleAsync(string userId, string roleId)
     {
-        var existinToles = await context.UserRoles
+        var existinRoles = await context.UserRoles
             .Where(ur => ur.UserId == userId)
             .ToListAsync();
-        context.UserRoles.RemoveRange(existinToles);
+       
+        context.UserRoles.RemoveRange(existinRoles);
+ 
         var newUserRole = new UserRole
         {
             Id = UuidGenerator.GenerateUserId(),
@@ -108,6 +116,4 @@ public class UserRepository (ApplicationDbContext context): IUserRepository
         context.UserRoles.Add(newUserRole);
         await context.SaveChangesAsync();
     }
-
-
 }
